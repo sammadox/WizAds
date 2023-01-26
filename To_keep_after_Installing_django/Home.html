@@ -15,13 +15,26 @@
     <script src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\js\bar.js">
         // JavaScript code goes here
     </script>
+    <script>
+        function minpen() {
+          document.getElementById("demo").innerHTML = "Hello World";
+        }
+        function flash_pen()
+        {
+            document.getElementById("demo").innerHTML="test";
+            
+        }
+        function changeColor() {
+            document.getElementById("my-pencil").setAttribute('style', 'color: blue');
+        }
+    </script>
     <div>
        <!--Change the Font of h1-->
        <!-- Add the Lateral Bar-->
        <img id="svg-container" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Bar.svg" alt="Menu">
        <!-- In Progress-->
        <!-- Add the Pencil -->
-       <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;" onclick="minpen()">
+       <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;" onclick="minpen()" onmouseover="changeColor()">
        <!-- Add the Facebook -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;">
        <!-- Add the Instagram -->
@@ -40,6 +53,13 @@
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\calendar.svg" style="position: absolute; left: 49px; top: 750px;">
        <!-- Add the Boards -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\boards.svg" style="position: absolute; left: 124px; top: 50px;">
+       <!-- Add the Add button -->
+       <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\add.svg" style="position: absolute; left: 375px; top: 160px;">
+       <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\plus.svg" style="position: absolute; left: 410px; top: 165px;">
+       <!-- Add the organize section -->
+       <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg" style="position: absolute; left: 230px; top: 20px;">
+
+       <p id="demo"></p>
     </div>
   </body>
 </html>
