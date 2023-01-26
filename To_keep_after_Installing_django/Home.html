@@ -34,7 +34,7 @@
        <!-- Add the Pencil -->
        <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;">
        <!-- Add the Facebook -->
-       <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;">
+       <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;">
        <!-- Add the Instagram -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\instagram.svg" style="position: absolute; left: 48px; top: 300px;">
        <!-- Add the E-mail -->
@@ -60,10 +60,9 @@
        <p id="demo"></p>
     </div>
     <script>
-        const element = document.getElementById("my-pencil");
+        const element = document.getElementById("fb-dash");
         element.onmouseover = function() {
-          element.style.boxShadow = "0 0 20px red";
-          element.src = "C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg";
+          element.style.boxShadow = "10px 10px 10px 0px red";
         };
         element.onmouseout = function() {
           element.style.boxShadow = "none";
