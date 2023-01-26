@@ -23,18 +23,31 @@
         function mouse_out() {
                 console.log("Mouse out");
             }
+        function bright()
+        {
+            // Get a reference to the SVG element
+            var svg = document.getElementById("my-pencil");
+
+            // Get a reference to the element you want to change
+            var element = svg.getElementById("fill");
+
+            // Change the attribute
+            element.setAttribute("fill", "#A2BAEF");
+
+            //
+            console.output("test");
+        }
         //Bip sound for Pencil
         </script>
     <div>
        <!--Change the Font of h1-->
        <!-- Add the Lateral Bar-->
        <img id="svg-container" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Bar.svg" alt="Menu">
-       
        <!-- In Progress-->
        <!-- Add the Pencil -->
        <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;">
        <!-- Add the Facebook -->
-       <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;">
+       <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;" >
        <!-- Add the Instagram -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\instagram.svg" style="position: absolute; left: 48px; top: 300px;">
        <!-- Add the E-mail -->
@@ -56,6 +69,8 @@
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\plus.svg" style="position: absolute; left: 410px; top: 165px;">
        <!-- Add the organize section -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg" style="position: absolute; left: 230px; top: 20px;">
+       <!-- Add the Number of Pencils -->
+       <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\n_pen.svg" style="position: absolute; left: 230px; top: 500px;">
        
        <p id="demo"></p>
     </div>
