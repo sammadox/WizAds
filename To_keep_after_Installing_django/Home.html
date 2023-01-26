@@ -16,25 +16,23 @@
         // JavaScript code goes here
     </script>
     <script>
-        function minpen() {
-          document.getElementById("demo").innerHTML = "Hello World";
-        }
-        function flash_pen()
-        {
-            document.getElementById("demo").innerHTML="test";
-            
-        }
-        function changeColor() {
-            document.getElementById("my-pencil").setAttribute('style', 'color: blue');
-        }
-    </script>
+         //Animation for Pencil
+        function mouse_in() {
+                console.log("Mouse in ");
+            }
+        function mouse_out() {
+                console.log("Mouse out");
+            }
+        //Bip sound for Pencil
+        </script>
     <div>
        <!--Change the Font of h1-->
        <!-- Add the Lateral Bar-->
        <img id="svg-container" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Bar.svg" alt="Menu">
+       
        <!-- In Progress-->
        <!-- Add the Pencil -->
-       <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;" onclick="minpen()" onmouseover="changeColor()">
+       <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;">
        <!-- Add the Facebook -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;">
        <!-- Add the Instagram -->
@@ -58,8 +56,18 @@
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\plus.svg" style="position: absolute; left: 410px; top: 165px;">
        <!-- Add the organize section -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg" style="position: absolute; left: 230px; top: 20px;">
-
+    
        <p id="demo"></p>
     </div>
+    <script>
+        const element = document.getElementById("my-pencil");
+        element.onmouseover = function() {
+          element.style.boxShadow = "0 0 20px red";
+          element.src = "C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg";
+        };
+        element.onmouseout = function() {
+          element.style.boxShadow = "none";
+        };
+        </script>
   </body>
 </html>
