@@ -10,6 +10,9 @@
             margin: 0;
             zoom: 65%;
           }  
+          .shown {
+            display: block;
+          }
     </style>
   </head>
   <body>
@@ -52,7 +55,9 @@
             element2.style.display="block"
             //Same for normal
             var element3=document.getElementById("mon");
-            element3.style.display="bloc"
+            element3.style.display="block"
+            
+            
           }
         //Bip sound for Pencil
 
@@ -97,11 +102,20 @@
        
        <!-- Facebook Menu-->
        <!-- The about section-->
-       <img id="abt" class="magic" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\about.svg" style="position: absolute; left: 230px; top: 250px; display:none;">
+       <img id="abt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\about.svg" style="position: absolute; left: 230px; top: 250px; display:none;">
        <!-- Facebook Menu-->
-       <img id="wrt" class="magic" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\write.svg" style="position: absolute; left: 230px; top: 200px; display:none;">
-       <img id="mon" class="magic" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\normal.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
-       
+       <img id="wrt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\write.svg" style="position: absolute; left: 230px; top: 200px; display:none;">
+       <!-- List of modes-->
+       <!-- Normal Mode-->
+       <img id="mon" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\normal.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <!-- Funny Mode-->
+       <img id="mof" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\funny.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <!-- Inspirationnal Mode-->
+       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\inspi.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <!-- Relaxed Mode-->
+       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\relaxed.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <!-- Luxury Mode-->
+       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
        <p id="demo"></p>
     </div>
     <script>
