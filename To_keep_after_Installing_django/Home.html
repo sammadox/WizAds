@@ -49,18 +49,55 @@
             element1.style.display = "none";
             //Same for the + button
             var element2=document.getElementById("addsec2");
-            element2.style.display="none"
+            element2.style.display="none";
             //Same for Write
-            var element2=document.getElementById("wrt");
-            element2.style.display="block"
+            var element3=document.getElementById("wrt");
+            element3.style.display="block";
             //Same for normal
-            var element3=document.getElementById("mon");
-            element3.style.display="block"
-            
+            var element4=document.getElementById("mon");
+            element4.style.display="block";
+            //Same for organize
+            var element4=document.getElementById("orgt");
+            element4.style.display="none";
+            //Same for funny need to create classes to gain in time in other section
+            var element5=document.getElementById("mof");
+            element5.style.display="block";
+            //Same for funny need to create classes to gain in time in other section
+            var element6=document.getElementById("moi");
+            element6.style.display="block";
+            //Same for relaxed
+            var element7=document.getElementById("mor");
+            element7.style.display="block";
+            //Same for luxury
+            var element8=document.getElementById("mol");
+            element8.style.display="block";
+
             
           }
-        //Bip sound for Pencil
-
+        //Function to select a specific part
+          function snor(){
+          var tst = document.getElementById("mons").style.display;
+          if(tst=="none") {
+            document.getElementById("mons").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("mons").style.display="none";
+          }
+        }
+        function snof(){
+          var tst = document.getElementById("mofs").style.display;
+          
+          if(tst=="none") {
+            document.getElementById("mofs").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("mofs").style.display="none";
+          }
+        }
+          //Bip sound for Pencil
+          
         //Create a Function to diplay an element in the page that takes two inputs the path of the SVG, the coordinate when it should appear
         
         //Do the same but for deleting elements
@@ -96,7 +133,7 @@
        <img id="addsec" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\add.svg" style="position: absolute; left: 375px; top: 160px;">
        <img id="addsec2" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\plus.svg" style="position: absolute; left: 410px; top: 165px;">
        <!-- Add the organize section -->
-       <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg" style="position: absolute; left: 230px; top: 20px;">
+       <img id="orgt" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg" style="position: absolute; left: 230px; top: 20px;">
        <!-- Add the Number of Pencils -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\n_pen.svg" style="position: absolute; left: 230px; top: 500px;">
        
@@ -104,18 +141,27 @@
        <!-- The about section-->
        <img id="abt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\about.svg" style="position: absolute; left: 230px; top: 250px; display:none;">
        <!-- Facebook Menu-->
-       <img id="wrt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\write.svg" style="position: absolute; left: 230px; top: 200px; display:none;">
+       <img id="wrt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\write.svg" style="position: absolute; left: 230px; top: 20px; display:none;">
        <!-- List of modes-->
+       <!-- First segment-->
        <!-- Normal Mode-->
-       <img id="mon" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\normal.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       
+       <a href="javascript:snor()">
+          <img id="mon" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\normal.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+          <img id="mons" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\nsec.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+        </a>
+        
        <!-- Funny Mode-->
-       <img id="mof" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\funny.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <a href="javascript:snof()">
+          <img id="mof" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\funny.svg" style="position: absolute; left: 350px; top: 350px; display:none;">
+          <img id="mofs" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\funs.svg" style="position: absolute; left: 350px; top: 350px; display:none;">
+        </a>
        <!-- Inspirationnal Mode-->
-       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\inspi.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\inspi.svg" style="position: absolute; left: 455px; top: 350px; display:none;">
        <!-- Relaxed Mode-->
-       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\relaxed.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <img id="mor" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\relaxed.svg" style="position: absolute; left: 620px; top: 350px; display:none;">
        <!-- Luxury Mode-->
-       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       <img id="mol" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 750px; top: 350px; display:none;">
        <p id="demo"></p>
     </div>
     <script>
