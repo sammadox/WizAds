@@ -34,7 +34,6 @@
 
             // Change the attribute
             element.setAttribute("fill", "#A2BAEF");
-
             //
             console.output("test");
         }
@@ -48,6 +47,12 @@
             //Same for the + button
             var element2=document.getElementById("addsec2");
             element2.style.display="none"
+            //Same for Write
+            var element2=document.getElementById("wrt");
+            element2.style.display="block"
+            //Same for normal
+            var element3=document.getElementById("mon");
+            element3.style.display="bloc"
           }
         //Bip sound for Pencil
 
@@ -63,7 +68,9 @@
        <!-- Add the Pencil -->
        <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;">
        <!-- Add the Facebook -->
-       <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;" onclick="fbmenu()">
+       <a href="javascript:fbmenu()">
+          <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;" onclick="fbmenu()">
+       </a>
        <!-- Add the Instagram -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\instagram.svg" style="position: absolute; left: 48px; top: 300px;">
        <!-- Add the E-mail -->
@@ -87,8 +94,14 @@
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg" style="position: absolute; left: 230px; top: 20px;">
        <!-- Add the Number of Pencils -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\n_pen.svg" style="position: absolute; left: 230px; top: 500px;">
+       
        <!-- Facebook Menu-->
+       <!-- The about section-->
        <img id="abt" class="magic" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\about.svg" style="position: absolute; left: 230px; top: 250px; display:none;">
+       <!-- Facebook Menu-->
+       <img id="wrt" class="magic" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\write.svg" style="position: absolute; left: 230px; top: 200px; display:none;">
+       <img id="mon" class="magic" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\normal.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
+       
        <p id="demo"></p>
     </div>
     <script>
