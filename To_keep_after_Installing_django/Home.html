@@ -37,6 +37,11 @@
             //
             console.output("test");
         }
+        function fbmenu() {
+            // code to be executed when the image is clicked
+            var elem=document.getElementById("fb-dash");
+            elem.style.display = "block";
+          }
         //Bip sound for Pencil
         </script>
     <div>
@@ -47,7 +52,7 @@
        <!-- Add the Pencil -->
        <img id="my-pencil" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Pencil.svg" style="position: absolute; left: 25px; top: 25px;">
        <!-- Add the Facebook -->
-       <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;" >
+       <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 225px;" onclick="fbmenu()">
        <!-- Add the Instagram -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\instagram.svg" style="position: absolute; left: 48px; top: 300px;">
        <!-- Add the E-mail -->
@@ -71,7 +76,6 @@
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\organize_text.svg" style="position: absolute; left: 230px; top: 20px;">
        <!-- Add the Number of Pencils -->
        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\n_pen.svg" style="position: absolute; left: 230px; top: 500px;">
-       
        <p id="demo"></p>
     </div>
     <script>
