@@ -71,11 +71,21 @@
             //Same for luxury
             var element8=document.getElementById("mol");
             element8.style.display="block";
+            //Professionnal 
+            var element9=document.getElementById("mop");
+            element9.style.display="block";
+            //Adventurous
+            var element10=document.getElementById("moa");
+            element10.style.display="block";
+            //Bold
+            var element11=document.getElementById("mob");
+            element11.style.display="block";
+            
 
             
           }
         //Function to select a specific part
-          function snor(){
+        function snor(){
           var tst = document.getElementById("mons").style.display;
           if(tst=="none") {
             document.getElementById("mons").style.display="block";
@@ -94,6 +104,69 @@
           else
           {
             document.getElementById("mofs").style.display="none";
+          }
+        }
+        function snoi(){
+          var tst = document.getElementById("mois").style.display;
+          if(tst=="none") {
+            document.getElementById("mois").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("mois").style.display="none";
+          }
+        }
+        function snore(){
+          var tst = document.getElementById("mors").style.display;
+          if(tst=="none") {
+            document.getElementById("mors").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("mors").style.display="none";
+          }
+        }
+        function snol(){
+          var tst = document.getElementById("mols").style.display;
+          if(tst=="none") {
+            document.getElementById("mols").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("mols").style.display="none";
+          }
+        }
+        //Professionnal Mode
+        function snop(){
+          var tst = document.getElementById("mops").style.display;
+          if(tst=="none") {
+            document.getElementById("mops").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("mops").style.display="none";
+          }
+        }
+        //Adventurous 
+        function snoa(){
+          var tst = document.getElementById("moas").style.display;
+          if(tst=="none") {
+            document.getElementById("moas").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("moas").style.display="none";
+          }
+        }
+        //Bold
+        function snob(){
+          var tst = document.getElementById("mobs").style.display;
+          if(tst=="none") {
+            document.getElementById("mobs").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("mobs").style.display="none";
           }
         }
         //Bip sound for Pencil
@@ -157,17 +230,35 @@
           <img id="mofs" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\funs.svg" style="position: absolute; left: 350px; top: 350px; display:none;">
         </a>
        <!-- Inspirationnal Mode-->
-       <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\inspi.svg" style="position: absolute; left: 455px; top: 350px; display:none;">
+       <a href="javascript:snoi()">
+          <img id="moi" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\inspi.svg" style="position: absolute; left: 455px; top: 350px; display:none;">
+          <img id="mois" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\insp.svg" style="position: absolute; left: 455px; top: 350px; display:none;">
+        </a>
        <!-- Relaxed Mode-->
-       <img id="mor" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\relaxed.svg" style="position: absolute; left: 620px; top: 350px; display:none;">
+       <a href="javascript:snore()">
+          <img id="mor" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\relaxed.svg" style="position: absolute; left: 620px; top: 350px; display:none;">
+          <img id="mors" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\rels.svg" style="position: absolute; left: 620px; top: 350px; display:none;">
+        </a>
        <!-- Luxury Mode-->
-       <img id="mol" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 750px; top: 350px; display:none;">
+       <a href="javascript:snol()">
+          <img id="mol" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 750px; top: 350px; display:none;">
+          <img id="mols" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\luxs.svg" style="position: absolute; left: 750px; top: 350px; display:none;">
+        </a>
        <!-- Professionnal Mode-->
-       <img id="mop" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 750px; top: 350px; display:none;">
+       <a href="javascript:snop()">
+          <img id="mop" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\professionnal.svg" style="position: absolute; left: 230px; top: 410px; display:none;">
+          <img id="mops" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\pros.svg" style="position: absolute; left: 230px; top: 410px; display:none;">
+        </a>
        <!-- Adventurous Mode-->
-       <img id="moa" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 750px; top: 350px; display:none;">
+       <a href="javascript:snoa()">
+       <img id="moa" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\Adventurous.svg" style="position: absolute; left: 385px; top: 410px; display:none;">
+       <img id="moas" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\advs.svg" style="position: absolute; left: 385px; top: 410px; display:none;">
+      </a>
        <!-- Bold Mode-->
-       <img id="mob" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\luxury.svg" style="position: absolute; left: 750px; top: 350px; display:none;">
+      <a href="javascript:snob()">
+       <img id="mob" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\Bold.svg" style="position: absolute; left: 550px; top: 410px; display:none;">
+       <img id="mobs" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\bolds.svg" style="position: absolute; left: 550px; top: 410px; display:none;">
+      </a>
        <p id="demo"></p>
     </div>
     <script>
