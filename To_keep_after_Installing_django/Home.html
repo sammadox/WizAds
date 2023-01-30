@@ -139,8 +139,8 @@
             
             var element23=document.getElementById("ooff3");
             element23.style.display="block";
-            var element22g=document.getElementById("gc2");
-            element22g.style.display="block";
+            var element23g=document.getElementById("gc3");
+            element23g.style.display="block";
           }
         //Function to select a specific part
         function snor(){
@@ -261,6 +261,29 @@
             document.getElementById("llons").style.display="none";
           }
         }
+        //Function to change the on off once clicked
+        function switOnOff(elm1,elm2,elm3,elm4)
+        {
+          var element23g=document.getElementById(elm1);
+          var element24g=document.getElementById(elm2);
+          if (element23g.style.display=="none")
+          {
+            element23g.style.display="block";
+            element24g.style.display="none";
+            const element = document.getElementById(elm3);
+            const offset = 50;
+            element.style.transform = `translateX(${offset}px)`;
+          }
+          else
+          {
+            element23g.style.display="none";
+            element24g.style.display="block";
+            element = document.getElementById(elm3);
+            offset = 0;
+            element.style.transform = `translateX(${offset}px)`;
+           
+          }
+        }
         //Bip sound for Pencil
         
         //Create a Function to diplay an element in the page that takes two inputs the path of the SVG, the coordinate when it should appear
@@ -378,13 +401,21 @@
       <!--Emoticone-->
       <!--Text-->
       <img id="4temo" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\emojis.svg" style="position: absolute; left: 240px; top: 650px; display:none;">
-      <img id="ooff1" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\off.svg" style="position: absolute; left: 240px; top: 700px; display:none;">
-      <img id="gc1" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 245px; top: 705px; display:none;">
+      <a href="javascript:switOnOff('ooff1b','ooff1','gc1','ooffs')">
+        <img id="ooff1" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\off.svg" style="position: absolute; left: 240px; top: 700px; display:none;">
+        <img id="ooff1b" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\on.svg" style="position: absolute; left: 240px; top: 700px; display:none;">
+        <img id="gc1" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 245px; top: 705px; display:none;">
+        <img id="ooffs" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\onoffselected.svg" style="position: absolute; left: 240px; top: 700px; display:none;">
+      </a>
+     
       <!--Urgency-->
       <!--Text-->
+
       <img id="4teurg" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\urgency.svg" style="position: absolute; left: 380px; top: 650px; display:none;">
-      <img id="ooff2" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\off.svg" style="position: absolute; left: 390px; top: 700px; display:none;">
-      <img id="gc2" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 395px; top: 705px; display:none;">
+      <a href="javascript:switOnOff('ooff1b','ooff1','gc1','ooffs')">
+        <img id="ooff2" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\off.svg" style="position: absolute; left: 390px; top: 700px; display:none;">
+        <img id="gc2" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 395px; top: 705px; display:none;">
+      </a>
       <!--Salesy-->
       <!--Text-->
       <img id="4tsal" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\salesy.svg" style="position: absolute; left: 540px; top: 650px; display:none;">
