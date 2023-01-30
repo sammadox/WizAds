@@ -41,6 +41,21 @@
             console.output("test");
         }
         function fbmenu() {
+            //Test the translation on Facebook element
+            let elem= document.getElementById("fb-dash");
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
+
             // code to be executed when the image is clicked
             var element = document.getElementById("abt");
             element.style.display = "block";
@@ -112,6 +127,19 @@
             //Emoticones
             var element20=document.getElementById("4tsal");
             element20.style.display="block";
+            //On Off
+            var element21=document.getElementById("ooff1");
+            element21.style.display="block";
+            var element21g=document.getElementById("gc1");
+            element21g.style.display="block";
+            var element22=document.getElementById("ooff2");
+            element22.style.display="block";
+            var element22g=document.getElementById("gc2");
+            element22g.style.display="block";
+            
+            var element23=document.getElementById("ooff3");
+            element23.style.display="block";
+            
           }
         //Function to select a specific part
         function snor(){
@@ -233,7 +261,7 @@
           }
         }
         //Bip sound for Pencil
-          
+        
         //Create a Function to diplay an element in the page that takes two inputs the path of the SVG, the coordinate when it should appear
         
         //Do the same but for deleting elements
@@ -349,12 +377,18 @@
       <!--Emoticone-->
       <!--Text-->
       <img id="4temo" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\emojis.svg" style="position: absolute; left: 240px; top: 650px; display:none;">
+      <img id="ooff1" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\off.svg" style="position: absolute; left: 240px; top: 700px; display:none;">
+      <img id="gc1" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 245px; top: 705px; display:none;">
       <!--Urgency-->
       <!--Text-->
       <img id="4teurg" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\urgency.svg" style="position: absolute; left: 380px; top: 650px; display:none;">
+      <img id="ooff2" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\off.svg" style="position: absolute; left: 390px; top: 700px; display:none;">
+      <img id="gc2" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 395px; top: 705px; display:none;">
       <!--Salesy-->
       <!--Text-->
       <img id="4tsal" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\salesy.svg" style="position: absolute; left: 540px; top: 650px; display:none;">
+      <img id="ooff3" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\off.svg" style="position: absolute; left: 540px; top: 700px; display:none;">
+      <img id="gc3" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 545px; top: 705px; display:none;">
       <p id="demo"></p>
     </div>
     <script>
