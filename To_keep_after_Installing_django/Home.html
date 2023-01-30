@@ -80,9 +80,38 @@
             //Bold
             var element11=document.getElementById("mob");
             element11.style.display="block";
+            //Text
+            //About
+            var element12=document.getElementById("texabt");
+            element12.style.display="block";
+            //Mood
+            var element13=document.getElementById("texmood");
+            element13.style.display="block";
+            //Length section
+            //Length
+            var element14=document.getElementById("texlen");
+            element14.style.display="block";
+            //Short
+            var element15=document.getElementById("lsh");
+            element15.style.display="block";
+            //Medium
+            var element16=document.getElementById("lmed");
+            element16.style.display="block";
+            //Long
+            var element17=document.getElementById("llon");
+            element17.style.display="block";
             
-
-            
+            //4th section
+            //text
+            //Emoticones
+            var element18=document.getElementById("4temo");
+            element18.style.display="block";
+            //Emoticones
+            var element19=document.getElementById("4teurg");
+            element19.style.display="block";
+            //Emoticones
+            var element20=document.getElementById("4tsal");
+            element20.style.display="block";
           }
         //Function to select a specific part
         function snor(){
@@ -169,6 +198,40 @@
             document.getElementById("mobs").style.display="none";
           }
         }
+        //Length choice
+        //Short
+        function snos(){
+          var tst = document.getElementById("lshs").style.display;
+          if(tst=="none") {
+            document.getElementById("lshs").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("lshs").style.display="none";
+          }
+        }
+        //Medium
+        function snom(){
+          var tst = document.getElementById("lmeds").style.display;
+          if(tst=="none") {
+            document.getElementById("lmeds").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("lmeds").style.display="none";
+          }
+        }
+        //Long
+        function snolo(){
+          var tst = document.getElementById("llons").style.display;
+          if(tst=="none") {
+            document.getElementById("llons").style.display="block";
+          }   
+          else
+          {
+            document.getElementById("llons").style.display="none";
+          }
+        }
         //Bip sound for Pencil
           
         //Create a Function to diplay an element in the page that takes two inputs the path of the SVG, the coordinate when it should appear
@@ -212,18 +275,18 @@
        
        <!-- Facebook Menu-->
        <!-- The about section-->
-       <img id="abt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\about.svg" style="position: absolute; left: 230px; top: 250px; display:none;">
+       <!-- Text about-->
+       <img id="texabt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Text\about.svg" style="position: absolute; left: 240px; top: 150px; display:none;">
+       <img id="abt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\about.svg" style="position: absolute; left: 230px; top: 200px; display:none;">
        <!-- Facebook Menu-->
        <img id="wrt" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\write.svg" style="position: absolute; left: 230px; top: 20px; display:none;">
        <!-- List of modes-->
        <!-- First segment-->
        <!-- Normal Mode-->
-       
        <a href="javascript:snor()">
           <img id="mon" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\normal.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
           <img id="mons" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\nsec.svg" style="position: absolute; left: 230px; top: 350px; display:none;">
-        </a>
-        
+       </a>
        <!-- Funny Mode-->
        <a href="javascript:snof()">
           <img id="mof" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\funny.svg" style="position: absolute; left: 350px; top: 350px; display:none;">
@@ -259,7 +322,40 @@
        <img id="mob" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\Bold.svg" style="position: absolute; left: 550px; top: 410px; display:none;">
        <img id="mobs" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Mood\selected\bolds.svg" style="position: absolute; left: 550px; top: 410px; display:none;">
       </a>
-       <p id="demo"></p>
+      <!-- Text mood-->
+      <img id="texmood" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Text\mood.svg" style="position: absolute; left: 240px; top: 300px; display:none;">
+      
+      
+      <!-- length Section-->
+      <!-- Text length-->
+      <img id="texlen" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Text\length.svg" style="position: absolute; left: 240px; top: 500px; display:none;">
+      <!--Short -->
+      <a href="javascript:snos()">
+        <img id="lsh" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Length\short.svg" style="position: absolute; left: 240px; top: 550px; display:none;">
+        <img id="lshs" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Length\Selected\short.svg" style="position: absolute; left: 240px; top: 550px; display:none;">
+      </a>
+      <!--Medium -->
+      <a href="javascript:snom()">
+        <img id="lmed" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Length\medium.svg" style="position: absolute; left: 340px; top: 550px; display:none;">
+        <img id="lmeds" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Length\Selected\medium.svg" style="position: absolute; left: 340px; top: 550px; display:none;">
+      </a>
+      <!--Long -->
+      <a href="javascript:snolo()">
+        <img id="llon" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Length\long.svg" style="position: absolute; left: 465px; top: 550px; display:none;">
+        <img id="llons" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\Length\Selected\long.svg" style="position: absolute; left: 465px; top: 550px; display:none;">
+      </a>
+
+      <!--4th dimensions -->
+      <!--Emoticone-->
+      <!--Text-->
+      <img id="4temo" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\emojis.svg" style="position: absolute; left: 240px; top: 650px; display:none;">
+      <!--Urgency-->
+      <!--Text-->
+      <img id="4teurg" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\urgency.svg" style="position: absolute; left: 380px; top: 650px; display:none;">
+      <!--Salesy-->
+      <!--Text-->
+      <img id="4tsal" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Text\salesy.svg" style="position: absolute; left: 540px; top: 650px; display:none;">
+      <p id="demo"></p>
     </div>
     <script>
         </script>
