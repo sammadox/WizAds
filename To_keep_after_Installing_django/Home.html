@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Pencila</title>
     <style>
         body {
@@ -55,6 +56,7 @@ top: 0;
             console.output("test");
         }
         function instamenu(){
+          sur("insta-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
             curel.style.transform = `translateY(75px)`;
@@ -226,6 +228,7 @@ top: 0;
         }
         //laptop Menu
         function lapmenu(){
+          sur("lap-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
           curel.style.transform = `translateY(375px)`;
@@ -235,6 +238,7 @@ top: 0;
         }
         //Script Menu
         function scrmenu(){
+          sur("scr-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
           curel.style.transform = `translateY(450px)`;
@@ -243,6 +247,7 @@ top: 0;
           olh.style.display="none";
         }
         function teammenu(){
+          sur("team-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
           curel.style.transform = `translateY(525px)`;
@@ -251,6 +256,7 @@ top: 0;
           olh.style.display="none";
         }
         function calmenu(){
+          sur("cal-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
           curel.style.transform = `translateY(600px)`;
@@ -428,7 +434,7 @@ top: 0;
        <div class="persistent-element">
         <a href="javascript:fbmenu()">
           <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 185px;" onclick="fbmenu()" >
-          <img id="fb-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\facebook.svg" style="position: absolute; left: 55px; top: 185px; display: block" onclick="fbmenu()">
+          <img class="icon" id="fb-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\facebook.svg" style="position: absolute; left: 55px; top: 185px; display: block" onclick="fbmenu()">
         </a>
        </div>
       
@@ -436,7 +442,7 @@ top: 0;
        <div class="persistent-element">
         <a href="javascript:instamenu()">
           <img id="insta-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\instagram.svg" style="position: absolute; left: 48px; top: 260px;">
-          <img id="insta-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\instagram.svg" style="position: absolute; left: 48px; top: 260px; display: block">
+          <img class="icon" id="insta-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\instagram.svg" style="position: absolute; left: 48px; top: 260px; display: block">
         </a>
       </div>
 
