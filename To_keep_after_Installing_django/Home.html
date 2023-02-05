@@ -3,10 +3,10 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-bold.ttf" rel="stylesheet">
-    <link href="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-demibold-italic.ttf" rel="stylesheet">
-    <link href="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-medium.ttf" rel="stylesheet">
-    <link href="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-regular.ttf" rel="stylesheet">
+    <link src="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-bold.ttf" rel="stylesheet">
+    <link src="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-medium.ttf" rel="stylesheet">
+    <link src="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-regular.ttf" rel="stylesheet">
+    <link src="C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-bold.ttf" rel="stylesheet">
     <title>Pencila</title>
     <style>
         body {
@@ -17,6 +17,13 @@
           .shown {
             display: block;
           }
+          .text-section {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            font-family: AvenirNext-DemiBold;
+            font-size: 20px;
+      }
           .persistent-element {
             position: fixed;
 /* sets the element to the top of the viewport */
@@ -29,8 +36,13 @@ top: 0;
   position: relative;
   transition: transform 0.5s ease-in-out;
 }
-
-
+@font-face {
+    font-family: 'MyFont';
+    src: url('C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-demibold.ttf') format('truetype');
+  }
+  body {
+    font-family: 'MyFont', sans-serif;
+  }
     </style>
   </head>
   <body>
@@ -419,10 +431,12 @@ top: 0;
     <div>
       <img id="fadcanva" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\card.svg" style="position: absolute; left: 1300px; top: 2000px; display:block;">
       <iframe width="495" height="379" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\drag_and_drop\Drag_and_drop.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen style="position: absolute; top: 300px; left: 1320px;" scrolling="no"></iframe>
-      
+      <div class="text-section">
+        This is a text section with a specified position and font.
+      </div>
        <!--Change the Font of h1-->
        <!-- Add the Lateral Bar-->
-       <img id="svg-container" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Bar.svg" alt="Menu" class="persistent-element">
+       <img id="bar-pen" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Bar.svg" alt="Menu" class="persistent-element">
        <!-- In Progress-->
        <!-- Add the Pencil -->
        <div class="persistent-element">
