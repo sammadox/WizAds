@@ -21,6 +21,12 @@ top: 0;
 
  
 }
+#luxor {
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+
     </style>
   </head>
   <body>
@@ -48,9 +54,45 @@ top: 0;
             //
             console.output("test");
         }
+        function instamenu(){
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+            curel.style.transform = `translateY(75px)`;
+            //Hide the element
+          olh=document.getElementById("insta-dashs");
+          olh.style.display="none";
+        }
+        function convertColor(elementId, originalColor, newColor) {
+        function changeSrc(elementId, newSrc) {
+          const element = document.getElementById(elementId);
+          const tempImage = new Image();
+          tempImage.onload = function () {
+            element.src = newSrc;
+          };
+          tempImage.src = newSrc;
+        }
+        }
+        //A function that show all the original except the given id
+        function sur(idel){
+          const elements = document.getElementsByClassName("icon");
+          Array.from(elements).forEach(element => {
+            element.style.display="block";
+          });
+          const el1 = document.getElementById(idel);
+          el1.style.display="block";
+
+        }
         function fbmenu() {
+            sur("fb-dash");
+            //Hide the element
+            olh=document.getElementById("fb-dashs");
+            olh.style.display="none";
+            //Move down the cursor
+            curel = document.getElementById("luxor");
+            curel.style.transform = `translateY(0px)`;
             //Test the translation on Facebook element
             let elem= document.getElementById("fb-dash");
+           
             let velocity = 10;
             const friction = 0.95;
 
@@ -153,6 +195,69 @@ top: 0;
             var element100=document.getElementById("fadcanva");
             element100.style.display="block";
           }
+        //Twitter Menu
+        function twitmenu(){
+          sur("twit-dash");
+          //Hide the element
+          olh=document.getElementById("twit-dashs");
+          olh.style.display="none";
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+          curel.style.transform = `translateY(150px)`;
+        }
+        function emmenu(){
+          sur("em-dash");
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+            curel.style.transform = `translateY(225px)`;
+            //Hide the element
+            olh=document.getElementById("em-dashs");
+            olh.style.display="none";
+        }
+        //blog Menu
+        function blogmenu(){
+          sur("blog-dash");
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+          curel.style.transform = `translateY(300px)`;
+          //Hide the element
+          olh=document.getElementById("blog-dashs");
+          olh.style.display="none";
+        }
+        //laptop Menu
+        function lapmenu(){
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+          curel.style.transform = `translateY(375px)`;
+          //Hide the element
+          olh=document.getElementById("lap-dashs");
+          olh.style.display="none";
+        }
+        //Script Menu
+        function scrmenu(){
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+          curel.style.transform = `translateY(450px)`;
+          //Hide the element
+          olh=document.getElementById("scr-dashs");
+          olh.style.display="none";
+        }
+        function teammenu(){
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+          curel.style.transform = `translateY(525px)`;
+          //Hide the element
+          olh=document.getElementById("team-dashs");
+          olh.style.display="none";
+        }
+        function calmenu(){
+          //Move down the cursor
+          curel = document.getElementById("luxor");
+          curel.style.transform = `translateY(600px)`;
+          //Hide the element
+          olh=document.getElementById("cal-dashs");
+          olh.style.display="none";
+        }
         //Function to select a specific part
         function snor(){
           var tst = document.getElementById("mons").style.display;
@@ -295,6 +400,7 @@ top: 0;
            
           }
         }
+
         //Bip sound for Pencil
         
         //Create a Function to diplay an element in the page that takes two inputs the path of the SVG, the coordinate when it should appear
@@ -316,50 +422,79 @@ top: 0;
        
        <!-- Add the Facebook -->
        <!-- Create the bar but set it as hidden-->
-       <img id="cur" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\barcur.svg" style="position: absolute; left: 105px; top: 183px;" onclick="fbmenu()" >
+       <div id="luxor">
+          <img id="cur" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\barcur.svg" style="position: absolute; left: 108px; top: 160px;" onclick="fbmenu()" >
+      </div>
        <div class="persistent-element">
         <a href="javascript:fbmenu()">
           <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 185px;" onclick="fbmenu()" >
-       </a>
+          <img id="fb-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\facebook.svg" style="position: absolute; left: 55px; top: 185px; display: block" onclick="fbmenu()">
+        </a>
        </div>
       
        <!-- Add the Instagram -->
        <div class="persistent-element">
-       <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\instagram.svg" style="position: absolute; left: 48px; top: 260px;">
+        <a href="javascript:instamenu()">
+          <img id="insta-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\instagram.svg" style="position: absolute; left: 48px; top: 260px;">
+          <img id="insta-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\instagram.svg" style="position: absolute; left: 48px; top: 260px; display: block">
+        </a>
       </div>
+
        <!-- Add the Twitter Icon -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\twitter.svg" style="position: absolute; left: 48px; top: 335px;">
-       </div>
+        <a href="javascript:twitmenu()">
+          <img id="twit-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\twitter.svg" style="position: absolute; left: 48px; top: 335px;">
+          <img class="icon" id="twit-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\twitter.svg" style="position: absolute; left: 48px; top: 335px; display: block">
+        </a>
+      </div>
        
        <!-- Add the E-mail -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\email.svg" style="position: absolute; left: 48px; top: 410px;">
+        <a href="javascript:emmenu()">
+          <img id="em-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\email.svg" style="position: absolute; left: 48px; top: 410px;">
+          <img class="icon" id="em-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\email.svg" style="position: absolute; left: 48px; top: 410px; display: block">
+        </a>
+        
        </div>
        
        <!-- Add the blog post -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\article.svg" style="position: absolute; left: 53px; top: 485px;">
+        <a href="javascript:blogmenu()">
+          <img id="blog-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\article.svg" style="position: absolute; left: 53px; top: 485px;">
+          <img class="icon" id="blog-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\script.svg" style="position: absolute; left: 53px; top: 485px; display: block">
+        </a>
        </div>
        
        <!-- Add the laptop -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\laptop.svg" style="position: absolute; left: 47px; top: 560px;">
+        <a href="javascript:lapmenu()">
+          <img id="lap-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\laptop.svg" style="position: absolute; left: 47px; top: 560px;">
+          <img class="icon" id="lap-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\laptop.svg" style="position: absolute; left: 47px; top: 560px; display: block">
+        </a>
        </div>
        
        <!-- Add the Script -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\screen.svg" style="position: absolute; left: 47px; top: 635px;">
+       <a href="javascript:scrmenu()">
+          <img id="scr-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\screen.svg" style="position: absolute; left: 47px; top: 635px;">
+          <img class="icon" id="scr-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\youtube.svg" style="position: absolute; left: 47px; top: 635px; display: block">
+        </a>
        </div>
        
        <!-- Add the Team -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\team.svg" style="position: absolute; left: 40px; top: 710px;">
+        <a href="javascript:teammenu()">
+          <img id="team-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\team.svg" style="position: absolute; left: 40px; top: 710px;">
+          <img class="icon" id="team-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\team.svg" style="position: absolute; left: 40px; top: 710px; display: block">
+        </a>
        </div>
        
        <!-- Add the Calendar -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\calendar.svg" style="position: absolute; left: 49px; top: 785px;">
+        <a href="javascript:calmenu()">
+          <img id="cal-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\calendar.svg" style="position: absolute; left: 49px; top: 785px;">
+          <img class="icon" id="cal-dashs" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\icon_blues\calendar.svg" style="position: absolute; left: 49px; top: 785px; display: block">
+        </a>
        </div>
        
        <!-- Add the Boards -->
@@ -392,8 +527,6 @@ top: 0;
        <div class="persistent-element">
         <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\pen.svg" style="position: absolute; left: 50px; top: 990px;">
        </div>
-       
-       
        <!-- Facebook Menu-->
        <!-- The about section-->
        <!-- Text about-->
