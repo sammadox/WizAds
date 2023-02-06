@@ -22,7 +22,7 @@
             top: 50px;
             left: 50px;
             font-family: AvenirNext-DemiBold;
-            font-size: 20px;
+            font-size: 1px;
       }
           .persistent-element {
             position: fixed;
@@ -32,15 +32,23 @@ top: 0;
 
  
 }
+.persistent-element-luxor {
+            position: fixed;
+
+ 
+}
 #luxor {
   position: relative;
   transition: transform 0.5s ease-in-out;
 }
 @font-face {
-    font-family: 'MyFont';
-    src: url('C:\Users\Sammad\Documents\GitHub\Pencila\fonts\avenir-next-demibold.ttf') format('truetype');
-  }
+  font-family: 'MyFontName';
+  src: url('https://avenirnextfonts.s3.us-east-1.amazonaws.com/AvenirNext-Regular.woff2?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDGV1LWNlbnRyYWwtMSJIMEYCIQCJfOzGw1QsCNRgpuDpIzkSKvtrLtB9rQ%2FauAGe9QiKpAIhAOwVZgvfneZHfkKOM9HUm6KhZ5FCquUARmnpad06wdoqKvsCCC8QABoMMjY1MzM2NjU1NzYzIgzJXFt%2FN%2FpfPcLdO2wq2AKa97e9j2miH5wpV1lpLYhQ80QC0oI%2FslVYwxKEICKzLPj9N6Zci7gw6yWT5EkniTi%2B8Cp5BvRf5jEJtR0NAWosHM4CJbfp4rean6yVqVPbIJxK7ug2AIxJG7tdFYx5TJ2e1RjC98Bpyy49horPYxWlBeYWzBGHxiWVMz%2BKvJSjhMqX80LmAoc%2BPT8P72WrOx0FHLQy4dly5oPdUz0qPuPzWJAy8dueTU2VURDvCDl8a1rjp5aFcJYF9%2Fsm68YwGS5uvEO1JJKC0xi4XutYtptPiOeSSo9Ngp1ZJw2sAWxDdaCtafK%2BG6CYbeLqbPjbCyiBQZZWM%2FDserLgKFkSd4HdYZ8z0ZosawnYZH087QoDVxf%2FJovtCIv0hhWj26MSkcRB%2FLaMlJePXKHpI0KCUSOHtFkSNFAct%2BzB34gk5Z3HbbjqUZgY3FIHMmpD8f8BfUcmY42IFpeQ8jCw8%2F6eBjqyAnQz3yK7xvviZ6j3%2BWsmKHXR9WWG%2Fb5pMIZlD0y5uu2ddxediD59BFo1bd7lt32XrwvCmbn69K8PIpYnvpCNQ%2FWtqSFEpofj3%2F3potCKwG2qxJSdUxXXmiJVxP1pTo3Rl4v1z0ZFf%2BSY6A7fBQFx%2Freq3BsGnO8r5uORugEYqBP1tbir3CMKsOPL2Pp3u4LiX1khpUysarzgkxCspHSTT0SfohlS5nbySqE21E3KT3%2BHAv8pgS0U0noxdbNdWXtcTJQyb%2BZcj40cnDnldP6aMtPyH%2B%2Bn03Psrz%2FwWVbDCeYGM05cTA9YAj023OpzIxLNgT4OI1ZuuwMK7VJ%2FqaVmCpdprStgwPUpcwVxT2vyB2DcftLs56I%2FBwUm9m6E%2B%2FP8Z0OgKBW2aGDT6nWo0RGSGpZVtw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230205T165437Z&X-Amz-SignedHeaders=host&X-Amz-Expires=10800&X-Amz-Credential=ASIAT3R2MB6JZCETJINR%2F20230205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ae70214026483d1167f3675bf44cf43cffc7cf278745884c212bf81daf02f8bb) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
   body {
+    
     font-family: 'MyFont', sans-serif;
   }
     </style>
@@ -51,6 +59,7 @@ top: 0;
     </script>
     <script>
          //Animation for Pencil
+         //URL of the font: 
         function mouse_in() {
                 console.log("Mouse in ");
             }
@@ -71,13 +80,31 @@ top: 0;
             console.output("test");
         }
         function instamenu(){
+          
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("insta-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
-            curel.style.transform = `translateY(75px)`;
+            curel.style.transform = `translateY(70px)`;
             //Hide the element
           olh=document.getElementById("insta-dashs");
           olh.style.display="none";
+          //Translation on Facebook element
+            let elem= document.getElementById("insta-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         function convertColor(elementId, originalColor, newColor) {
         function changeSrc(elementId, newSrc) {
@@ -100,6 +127,8 @@ top: 0;
 
         }
         function fbmenu() {
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
             sur("fb-dash");
             //Hide the element
             olh=document.getElementById("fb-dashs");
@@ -107,7 +136,7 @@ top: 0;
             //Move down the cursor
             curel = document.getElementById("luxor");
             curel.style.transform = `translateY(0px)`;
-            //Test the translation on Facebook element
+            //Translation on Facebook element
             let elem= document.getElementById("fb-dash");
            
             let velocity = 10;
@@ -214,70 +243,191 @@ top: 0;
           }
         //Twitter Menu
         function twitmenu(){
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("twit-dash");
           //Hide the element
           olh=document.getElementById("twit-dashs");
           olh.style.display="none";
           //Move down the cursor
           curel = document.getElementById("luxor");
-          curel.style.transform = `translateY(150px)`;
+          curel.style.transform = `translateY(143px)`;
+          //Translation on Facebook element
+            let elem= document.getElementById("twit-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         function emmenu(){
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("em-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
-            curel.style.transform = `translateY(225px)`;
+            curel.style.transform = `translateY(218px)`;
             //Hide the element
             olh=document.getElementById("em-dashs");
             olh.style.display="none";
+
+            //Translation on Facebook element
+            let elem= document.getElementById("em-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         //blog Menu
         function blogmenu(){
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("blog-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
-          curel.style.transform = `translateY(300px)`;
+          curel.style.transform = `translateY(295px)`;
           //Hide the element
           olh=document.getElementById("blog-dashs");
           olh.style.display="none";
+          //Translation on Facebook element
+            let elem= document.getElementById("blog-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         //laptop Menu
         function lapmenu(){
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("lap-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
-          curel.style.transform = `translateY(375px)`;
+          curel.style.transform = `translateY(365px)`;
           //Hide the element
           olh=document.getElementById("lap-dashs");
           olh.style.display="none";
+          //Translation on Facebook element
+            let elem= document.getElementById("lap-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         //Script Menu
         function scrmenu(){
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("scr-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
-          curel.style.transform = `translateY(450px)`;
+          curel.style.transform = `translateY(445px)`;
           //Hide the element
           olh=document.getElementById("scr-dashs");
           olh.style.display="none";
+          
+          //Translation on Facebook element
+            let elem= document.getElementById("scr-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         function teammenu(){
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("team-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
-          curel.style.transform = `translateY(525px)`;
+          curel.style.transform = `translateY(520px)`;
           //Hide the element
           olh=document.getElementById("team-dashs");
           olh.style.display="none";
+          //Translation on Facebook element
+            let elem= document.getElementById("team-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         function calmenu(){
+          luxelm=document.getElementById("cur");
+          luxelm.style.display="block";
           sur("cal-dash");
           //Move down the cursor
           curel = document.getElementById("luxor");
-          curel.style.transform = `translateY(600px)`;
+          curel.style.transform = `translateY(595px)`;
           //Hide the element
           olh=document.getElementById("cal-dashs");
           olh.style.display="none";
+          //Translation on Facebook element
+            let elem= document.getElementById("cal-dash");
+           
+            let velocity = 10;
+            const friction = 0.95;
+
+            const animate = () => {
+              velocity *= friction;
+              elem.style.transform = `translateX(${velocity}px)`;
+              if (Math.abs(velocity) > 0.1) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            animate();
         }
         //Function to select a specific part
         function snor(){
@@ -445,9 +595,12 @@ top: 0;
        
        <!-- Add the Facebook -->
        <!-- Create the bar but set it as hidden-->
-       <div id="luxor">
-          <img id="cur" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\barcur.svg" style="position: absolute; left: 108px; top: 160px;" onclick="fbmenu()" >
+       <div class="persistent-element-luxor">
+        <div id="luxor">
+          <img id="cur" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\barcur.svg" style="position: absolute; left: 108px; top: 165px; display: none" onclick="fbmenu()" >
       </div>
+       </div>
+       
        <div class="persistent-element">
         <a href="javascript:fbmenu()">
           <img id="fb-dash" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\fb.svg" style="position: absolute; left: 55px; top: 185px;" onclick="fbmenu()" >
@@ -522,7 +675,7 @@ top: 0;
        
        <!-- Add the Boards -->
        <div class="persistent-element">
-        <img src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\boards.svg" style="position: absolute; left: 124px; top: 50px;">
+        <p style="font-family: 'MyFontName', sans-serif; color: #727272;font-size:25px ; font-weight:bold; position: absolute; top: 60px; left: 22px;">Pencila</p>
        </div>
        
        <!-- Add the Add button -->
@@ -632,7 +785,9 @@ top: 0;
         <img id="gc1" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\graycirc.svg" style="position: absolute; left: 245px; top: 705px; display:none;">
         <img id="ooffs" class="fbmn" src="C:\Users\Sammad\Documents\GitHub\Pencila\To_keep_after_Installing_django\src\Facebook\4thsection\Elements\onoffselected.svg" style="position: absolute; left: 240px; top: 700px; display:none;">
       </a>
-     
+      
+
+      
       <!--Urgency-->
       <!--Text-->
 
