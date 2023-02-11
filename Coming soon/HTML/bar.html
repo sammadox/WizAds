@@ -1,0 +1,169 @@
+
+<style>
+  body {
+    background-color: #ffffff;
+  }
+  #Rectangle_1 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #c6d5f4;
+  }
+  #Rectangle_2 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #cde4ed;
+  }
+  #Rectangle_3 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #b1dbda;
+  }
+  #Rectangle_4 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #c6cfed;
+  }
+  #Rectangle_5 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #aeceda;
+  }
+  #Rectangle_6 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #c5e2d9;
+  }
+  #Rectangle_7 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #b1dbda;
+  }
+  #Rectangle_8 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #a7c4e6;
+  }
+  #Rectangle_9 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #cee0f5;
+  }
+  #Rectangle_9 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #cee0f5;
+  }
+  #Rectangle_10 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #b1dbda;
+  }
+  #Rectangle_11 {
+    width: 148px;
+    height: 148px;
+    border-radius: 33px;
+    background-color: #c6d5f4;
+    transform: scale(0.5);
+  }
+  .dezoomed {
+    transform: scale(0.1);
+  }
+  body {
+    width: 1960px;
+    height: 1080px;
+  }
+  .bar-container {
+    width: 579px;
+  height: 71px;
+  border: 1px solid #c4c4c4;
+  border-radius: 35.5px;
+  overflow: hidden;
+  position: relative;
+}
+.form-control {
+    padding-left: 2.375rem;
+}
+
+.bar {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  animation: grow-bar 3s ease-in-out infinite alternate;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+input[type="text"] {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+@keyframes grow-bar {
+  0% {
+transform: scaleX(0);
+}
+50% {
+transform: scaleX(1.05);
+}
+100% {
+transform: scaleX(1);
+}
+}
+
+
+
+
+
+
+</style>
+<script>
+  const barContainer = document.querySelector('.bar-container');
+
+  barContainer.addEventListener('click', function() {
+  barContainer.style.display = 'none';
+  function showMessage() {
+        alert('Button clicked!');
+      }
+});
+</script>
+<body>
+  <div  class="bar-container form-group has-search">
+    <span class="fa fa-search form-control-feedback"></span>
+    <div class="bar">
+      <input type="text" class="form-control" placeholder="Sign up to stay in the loop !">
+    </div>
+    
+  </div>
+</body>
+

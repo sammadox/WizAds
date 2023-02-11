@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      input::-webkit-input-placeholder { 
+   color: #c4c4c4;
+}
+
+input:-moz-placeholder { 
+   color: #c4c4c4;  
+}
+
+input::-moz-placeholder {  
+   color: #c4c4c4;  
+}
+
+input:-ms-input-placeholder {  
+   color: #c4c4c4;  
+}
+      /* Styles for wrapping the search box */
+      .main {
+  margin: 50px auto;
+  width: 50%;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form-control {
+  width: 60%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus + .placeholder {
+  transform: translateY(-20px);
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+  
+  
+  </style>
+  
+
+</head>
+<body>
+    <div class="main">
+      <!-- Input group with search functionality -->
+      <div class="input-group">
+        <input type="email" class="form-control" placeholder="Sign up to stay in the loop!">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  
+</html>
