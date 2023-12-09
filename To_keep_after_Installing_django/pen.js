@@ -2,7 +2,7 @@ const dropZone = document.querySelector('#drop-zone');
         const inputElement = document.querySelector('input');
         const img = document.querySelector('img');
         let p = document.querySelector('p')
-
+        let p = document.querySelector('p')
         inputElement.addEventListener('change', function (e) {
             const clickFile = this.files[0];
             if (clickFile) {
